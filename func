@@ -1,0 +1,56 @@
+//Escrever uma função que encontre e conte os elementos únicos
+//(aqueles que aparecem exatamente uma vez) e os elementos 
+//que aparecem mais de duas vezes em um array.
+
+#include<stdio.h>
+
+void encontra_elementos (int arr[], int tam)
+{
+    int unico_elemento = 0;
+    int poli_elementos = 0;
+    
+    for (int i =0; i < tam; i++)
+    {
+        int contador = 0;
+        int elem_contado = 0;
+        
+        for (int j = 0; j < i; j++)
+        {
+            if (arr[i] ==  arr[j])
+            {
+                elem_contado = 1;
+                break;
+            }
+        }
+        if (elem_contado == 1){
+        continue;}
+        
+        for(int c = 0; c < tam; c++)
+        {
+            if (arr[i] == arr[c])
+            {
+                contador++;
+            }
+            
+        }
+        if (contador == 1)
+        {
+            unico_elemento++;
+           
+        }
+        if (contador > 1) 
+        {
+            poli_elementos++;
+        }
+    }
+    
+    printf("Qtd elementos únicos = %d\n ", unico_elemento);
+    printf("Qtd elementos duplos ou mais = %d\n", poli_elementos);
+}
+
+int main (void)
+{
+    int array[] = {1, 2, 2, 3, 4, 5, 5};
+    int tam = sizeof(array) / sizeof(array[0]);
+    encontra_elementos(array, tam);
+}
