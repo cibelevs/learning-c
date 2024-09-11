@@ -1,0 +1,42 @@
+//encontrar elementos duplicados
+#include<stdio.h>
+void elem_duplos (int arr[], int tam)
+{        
+    int duplicados = 0 ;
+    for (int i = 0; i<tam; i++) 
+    {   
+        int contador = 0;
+        int num_contado = 0;
+        for(int j = 0; j < i; j++) 
+        {
+            if(arr[i] == arr[j])
+            {
+                num_contado = 1;
+                break;
+            }
+        }
+        if (num_contado == 1)
+        {
+            continue;
+        }
+        
+        for (int c = 0; c < tam; c++) {
+            if (arr[i] == arr[c]) {
+                contador++;
+            }
+        }
+        if (contador > 1)  
+        {
+            duplicados++;
+            printf("Elemento duplicado:  %d\n ", arr[i] );
+        }
+        
+    }
+    printf("Total de elementos duplicados = %d", duplicados);
+}
+int main(void)
+{
+    int array[]={1, 2, 2 , 3, 3};
+    int tam = sizeof(array)/ sizeof(array[0]);
+    elem_duplos(array, tam);
+}
