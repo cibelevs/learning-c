@@ -1,0 +1,46 @@
+//7. Conversão de temperatura com switch e função
+//Escreva um programa que converte temperaturas 
+//entre Celsius, Fahrenheit e Kelvin usando switch.
+#include<stdio.h>
+int main (void)
+{
+    int temperatura;
+    float tempo;
+
+    printf("Insira a temperatura: ");
+    scanf(" %f", &tempo);
+    
+    printf("Insira 1 p/Celsius, 2 p/Fahrenheit ou 3 p/Kelvin: ");
+    scanf("%d", &temperatura);
+    
+    switch (temperatura)
+    {
+        case 1: 
+        printf("Conversão de Celsius para Fahrenheit\n");
+        printf ("%f\n", (tempo * 9/5) + 32);
+        
+        printf("\nConversão de Celsius para Kelvin\n");
+        printf("%f\n", tempo + 273);
+        break;
+        
+        case 2: 
+        printf("Conversão de Fahrenheit para Celsius\n ");
+        printf("%f\n", (tempo - 32)/ 1.8);
+        
+        printf("Conversão de Fahrenheit para Kelvin\n");
+        printf("%f\n", (tempo - 32) * 5/9 + 273);
+        break;
+        
+        case 3:
+        printf("Conversão de Kelvin para Celsius\n");
+        printf("%f\n", tempo - 273);
+        
+        printf("Conversão de Kelvin para Fahrenheit");
+        printf("%f\n", (tempo - 273) * 1.8 + 32 );
+        break;
+        
+        default:
+        printf("Número inválido!");
+    }
+    return 0;
+}
