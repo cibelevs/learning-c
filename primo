@@ -1,0 +1,34 @@
+//3. Verificação de número primo com for
+//Escreva uma função que recebe um número inteiro
+//e verifica se ele é primo usando um laço for.
+#include<stdio.h>
+void verifica_primo (int num)
+{
+    int c = 0;
+    for (int i = 2; i * i <= num; i++)
+    {
+        if (num%i != 0)
+        {
+            c++;
+        }
+    }
+    
+    if (c > 0)
+    {
+        printf("Número primo");
+    }
+    else 
+    {
+        printf("Número não é primo");
+    }
+}
+
+int main (void)
+{
+   int num;
+   printf("Insira um número: ");
+   scanf("%d", &num);
+    
+   verifica_primo(num);
+    return 0;
+}
