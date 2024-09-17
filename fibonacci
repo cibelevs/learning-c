@@ -1,0 +1,27 @@
+//6. Sequência de Fibonacci com for e função
+//Escreva uma função que imprime os n primeiros
+//termos da sequência de Fibonacci usando um laço for.
+#include<stdio.h>
+void Fibonacci (int função[], int tam)
+{
+     função[0] = 0;
+     função[1] = 1;
+
+    for(int i = 2; i<tam; i++){
+    
+        função[i] = função[i- 1]+função[i - 2];
+        printf("%d ", função[i]);
+    }
+}
+int main(void)
+{
+    int tamanho;
+    
+    printf("Insira um número de termos dejados: ");
+    scanf("%d", &tamanho);
+    
+    int array[tamanho];
+    printf("1 ");
+    Fibonacci(array, tamanho);
+    return 0;
+}
