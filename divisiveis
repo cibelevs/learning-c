@@ -1,0 +1,21 @@
+//8. Contagem de números divisíveis por 3
+//Crie uma função que conta quantos números de 1 a 100 são divisíveis por 3
+#include<stdio.h>
+int main (void)
+{
+    int contador = 0;
+    int i;
+    for (i=1; i<=100; i++)
+    {
+        if (i % 3 == 0)
+        {
+            contador++;
+        }
+    }
+    
+    printf("O número de número divisíveis por 3 é: %d", contador);
+    
+    
+    
+    
+}
