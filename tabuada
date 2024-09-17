@@ -1,0 +1,23 @@
+//1. Tabuada com for e função
+//Escreva uma função que recebe um número inteiro e imprime a tabuada desse número de 1 a 10 usando um laço for.
+
+#include<stdio.h>
+
+void tabuada (int num)
+{
+    printf("Tabuada do %d\n",num);
+    for(int i=0; i <= 10; i++)
+    {
+        printf("%d x %d = %d\n", num, i, num*i);
+    }
+}
+int main (void)
+{
+    int numero; 
+    printf("Insira um número: ");
+    scanf("%d", &numero);
+    
+    tabuada(numero);
+    return 0;
+}
+
