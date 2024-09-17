@@ -1,0 +1,23 @@
+//4. Cálculo fatorial com for e função
+//Escreva uma função que calcula o fatorial
+//de um número usando um laço for.
+#include<stdio.h>
+void fatorial (int num)
+{
+  int fat = 1;
+  for (int i = 1; i <= num; i++)
+  {
+    fat = fat * i;
+  }
+  printf("O fatorial de %d é igual a: %d", num, fat);
+}
+
+int main (void)
+{
+   int num;
+   printf("Insira um número: ");
+   scanf("%d", &num);
+    
+   fatorial(num);
+    return 0;
+}
