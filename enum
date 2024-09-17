@@ -1,0 +1,49 @@
+//5. Enum para dias da semana e switch
+//Crie um enum para os dias da semana
+//e use um switch para imprimir o nome do dia da semana com base em um número.
+#include<stdio.h>
+ enum {SEGUNDA, TERÇA, QUARTA, QUINTA, SEXTA, SABADO, DOMINGO} semana;
+ 
+int main (void)
+{
+    int num;
+    
+    printf("Insira um número: ");
+    scanf("%d", &num);
+    
+    switch(num)
+    {
+        case 1: 
+        printf("SEGUNDA");
+        break;
+        
+        case 2:
+        printf("TERÇA");
+        break;
+        
+        case 3:
+        printf("QUARTA");
+        break;
+        
+        case 4:
+        printf("QUINTA");
+        break;
+        
+        case 5: 
+        printf("SEXTA");
+        break;
+        
+        case 6:
+        printf("SÁBADO");
+        break;
+        
+        case 7:
+        printf("DOMINGO");
+        break;
+        
+        default:
+        printf("Número inválido.");
+    }
+
+    return 0;
+}
