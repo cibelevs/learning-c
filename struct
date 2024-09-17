@@ -1,0 +1,46 @@
+#include<stdio.h>
+struct Estudante {
+    char nome [40];
+    int matricula;
+    float nota;
+};
+
+void cadastrar_alunos (struct Estudante *e)
+{
+    printf("Insira o nome do estudante: ");
+    scanf("%s", &e -> nome);
+    
+    printf("Insira a matricula do estudante: ");
+    scanf(" %d", &e -> matricula);
+    
+    printf("Insira a nota: ");
+    scanf("%f", &e -> nota);
+}
+
+void imprimir_alunos (struct Estudante e)
+{
+    printf("Nome do aluno: %s", e.nome);
+    printf("Matricula do aluno: %d", e.matricula);
+    printf("Nota do aluno: %f", e.nota);
+}
+
+int main(void)
+{
+    struct Estudante alunos [3];
+    int i;
+    
+    for (i = 0; i < 3; i++)
+    {
+        printf("****CADASTRO DE ALUNOS****\n");
+        cadastrar_alunos(&alunos[i]);
+    }
+    
+    printf("Imprimindo cadastros\n");
+    
+    for(i = 0;  i < 3; i++)
+    {
+        imprimir_alunos(alunos[i]);
+    }
+
+    return 0;
+}
