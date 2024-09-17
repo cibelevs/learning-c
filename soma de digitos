@@ -1,0 +1,27 @@
+//10. Soma de dígitos de um número 
+//Escreva uma função que soma os dígitos de um número usando um laço for.
+#include<stdio.h>
+
+int soma_digitos (int num)
+{
+    int soma = 0;
+   while (num > 0)  
+   { 
+       soma = soma + num%10  ;  
+       num = num / 10;
+       
+   }
+    
+return soma;    
+}
+
+int main(void)
+{
+    int num;
+    
+    printf("Insira um número: ");
+    scanf("%d", &num);
+    
+    printf(" %d ", soma_digitos(num));
+    return 0;
+}
