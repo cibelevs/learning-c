@@ -1,0 +1,30 @@
+//9. Enum para cores e switch
+//Crie um enum para cores básicas e use
+//um switch para imprimir a cor com base em um número.
+
+#include<stdio.h>
+enum {VERMELHO = 1, BRANCO, AZUL} cores;
+
+int main()
+{
+    int num;
+    printf("insira um número entre 1, 2, 3: ");
+    scanf("%d", &num);
+    
+    switch(num)
+    {
+        case 1: 
+        printf("VERMELHO");
+        break;
+        
+        case 2:
+        printf("BRANCO");
+        break;
+        
+        case 3:
+        printf("AZUL");
+        break;
+    }
+    
+    return 0;
+}
