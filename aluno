@@ -1,0 +1,39 @@
+#include<stdio.h>
+#define MAXIMO_ALUNOS 6
+
+struct Estudante {
+ char nome[50];
+ int n_matricula;
+ float nota;
+};
+
+
+void cadastro_alunos (struct Estudante *ptr)
+{
+  printf ("Cadastro de aluno \n");
+
+  printf ("Insira o nome: ");
+  scanf("%s", ptr-> nome);
+
+  printf("Insira a matricula: ");
+  scanf("%d", &ptr -> matricula);
+
+  printf("Insira a nota: ");
+  sacnf("%f", &ptr -> nota);
+}
+
+int main (void)
+{
+  int n_alunos = 0;
+  Estudante Alunos[n_alunos];
+
+  int operação;
+  printf("Digite 1: ");
+  scanf("%d", &operação);
+
+  switch (operação
+
+  
+
+  return 0;
+}
