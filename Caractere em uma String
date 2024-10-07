@@ -1,0 +1,35 @@
+//Exercício 4: Procurar um Caractere em uma String
+#include<stdio.h>
+#include<string.h>
+
+int main (void)
+{
+    char string[100];
+    char caractere;
+    int found = 0;
+    
+    printf("Insira uma string: ");
+    scanf(" %s", string);
+    
+    printf("Insira um caractere para procurar na string: ");
+    scanf (" %c", &caractere);
+    
+    int tam = strlen(string);
+    
+    for (int i = 0; i < tam; i++)
+    {
+        if ( caractere == string[i])
+        {
+            printf("O caractere %c está na palavra %s", caractere, string);
+            found = 1;
+            break;
+        }
+    }
+    
+    if (found == 0)
+    {
+        printf("O caractere %c NÃO está na palavra %s", caractere, string);
+    }
+    
+    return 0;
+}
