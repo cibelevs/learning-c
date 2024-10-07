@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+
+void reverter_string (char *ponteiro, int tamanho)
+{
+    int i;
+    for (int i = tamanho - 1; i >= 0; i--)
+    {
+        printf ("%c", *(ponteiro + i));
+    }
+    
+}
+
+int main (void)
+{
+   char string[50];
+   printf("Insira uma string: ");
+   scanf("%s", string);
+
+   char *c_ptr = string;
+   int tam = strlen(string); //calculando o tamanho da string diretamente 
+   
+   reverter_string(c_ptr, tam);
+    
+    
+    return 0;
+}
